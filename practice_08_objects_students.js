@@ -34,6 +34,13 @@ const movie = {
   rating: "PG-13",
   runtime: 169,
 };
+console.log(movie.title);
+console.log(movie.director);
+if (movie.type > 120) {
+  console.log("true");
+} else {
+  console.log("false");
+}
 
 // TODO 1: Print the movie title
 // console.log(...)
