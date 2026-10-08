@@ -33,27 +33,24 @@ const movie = {
   director: "Christopher Nolan",
   rating: "PG-13",
   runtime: 169,
+  watched: true,
 };
+// TODO 1: Print the movie title
+// console.log(...)
 console.log(movie.title);
+// TODO 2: Print the director's name
+// console.log(...)
 console.log(movie.director);
-if (movie.type > 120) {
+// TODO 3: Print true/false — is runtime over 120?
+// console.log(...)
+if (movie.runtime > 120) {
   console.log("true");
 } else {
   console.log("false");
 }
-
-// TODO 1: Print the movie title
-// console.log(...)
-
-// TODO 2: Print the director's name
-// console.log(...)
-
-// TODO 3: Print true/false — is runtime over 120?
-// console.log(...)
-
 // TODO 4: Add a `watched` property set to true
 // movie.??? = ???
-
+console.log(movie.watched);
 // TODO 5: Print each key-value pair
 // console.log("Title:", ...)
 // console.log("Year:", ...)
@@ -61,6 +58,12 @@ if (movie.type > 120) {
 // console.log("Rating:", ...)
 // console.log("Runtime:", ...)
 // console.log("Watched:", ...)
+console.log("Title:", movie.title);
+console.log("Year:", movie.year);
+console.log("Director:", movie.director);
+console.log("Rating:", movie.rating);
+console.log("Runtime:", movie.runtime);
+console.log("Watched:", movie.watched);
 
 // =================================================================
 // PROBLEM 2 — Build Your Own Object
@@ -73,14 +76,25 @@ if (movie.type > 120) {
 //   createStudent("Alex", 11, 3.7)  → { name: "Alex", grade: 11, gpa: 3.7, isHonors: true }
 //   createStudent("Sam",  10, 2.9)  → { name: "Sam",  grade: 10, gpa: 2.9, isHonors: false }
 
-function createStudent(name, grade, gpa) {
+function createStudent(name, grade, gpa, isHonors) {
   // TODO: return an object with name, grade, gpa, and isHonors
+  return {
+    name: name,
+    grade: grade,
+    gpa: gpa,
+    isHonors: isHonors,
+  };
+}
+if (gpa >= 3.5) {
+  console.log("true");
+} else {
+  console.log("false");
 }
 
 // Test your function — uncomment when ready:
-// console.log("\n--- Problem 2 ---");
-// console.log(createStudent("Alex", 11, 3.7));
-// console.log(createStudent("Sam", 10, 2.9));
+console.log("\n--- Problem 2 ---");
+console.log(createStudent("Alex", 11, 3.7));
+console.log(createStudent("Sam", 10, 2.9));
 
 // =================================================================
 // PROBLEM 3 — Searching an Array of Objects
@@ -94,6 +108,7 @@ function createStudent(name, grade, gpa) {
 //   findByName(students, "Marcus")  → null
 
 function findByName(students, targetName) {
+  return {};
   // TODO: use .find() to search by name
   // Hint: .find() returns undefined if nothing matches — convert that to null using || (or) operator
 }
