@@ -76,15 +76,23 @@ console.log("Watched:", movie.watched);
 //   createStudent("Alex", 11, 3.7)  → { name: "Alex", grade: 11, gpa: 3.7, isHonors: true }
 //   createStudent("Sam",  10, 2.9)  → { name: "Sam",  grade: 10, gpa: 2.9, isHonors: false }
 
+const score = {
+  name: name,
+  grade: grade,
+  gpa: gpa,
+  isHonors: isHonors,
+};
+
 function createStudent(name, grade, gpa, isHonors) {
   // TODO: return an object with name, grade, gpa, and isHonors
-  return {
-    name: name,
-    grade: grade,
-    gpa: gpa,
-    isHonors: isHonors,
-  };
+  if (createStudent.gpa >= 3.5) {
+    console.log("isHonors: true");
+  } else {
+    console.log("isHonors: false");
+  }
+  return (name, grade, gpa);
 }
+
 if (gpa >= 3.5) {
   console.log("true");
 } else {
@@ -107,11 +115,11 @@ console.log(createStudent("Sam", 10, 2.9));
 //   findByName(students, "ChenZee") → { name: "ChenZee", grade: 12, gpa: 3.5, isHonors: false }
 //   findByName(students, "Marcus")  → null
 
-function findByName(students, targetName) {
-  return {};
-  // TODO: use .find() to search by name
-  // Hint: .find() returns undefined if nothing matches — convert that to null using || (or) operator
-}
+//function findByName(students, targetName) {
+//return {};
+// TODO: use .find() to search by name
+// Hint: .find() returns undefined if nothing matches — convert that to null using || (or) operator
+//}
 
 // Test your function — uncomment when ready:
 // console.log("\n--- Problem 3 ---");
