@@ -77,8 +77,8 @@ console.log("Watched:", movie.watched);
 //   createStudent("Sam",  10, 2.9)  → { name: "Sam",  grade: 10, gpa: 2.9, isHonors: false }
 
 const score = {
-  name: name,
-  grade: grade,
+  name: "name",
+  grade: grade,                  
   gpa: gpa,
   isHonors: isHonors,
 };
@@ -143,7 +143,18 @@ console.log(createStudent("Sam", 10, 2.9));
 function printRoster(students) {
   // TODO: loop through students with .forEach()
   // TODO: print each student in the format above
-}
+  const students= {
+    grade: grade
+    name: "name"
+    gpa: gpa
+
+  }
+    
+
+   students.forEach
+    console.log(`Grade ${grade.name}` `name ${student.name}` `gpa ${gpa.name}`) 
+   }
+
 
 // Test your function — uncomment when ready:
 // console.log("\n--- Problem 4 ---");
